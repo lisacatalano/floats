@@ -6,6 +6,9 @@ ul {
   list-style: none;
   background-color: #f0cd41;
   padding: 0;
+  /* Option 1: float: left;*/
+  /* Option 2: overflow: auto;*/
+  height: 43px;
 }
 
 li {
@@ -14,21 +17,40 @@ li {
   padding: .75em;
   text-align: center;
   margin-right: 1em;
+  float: left;
 }
 
 .main { 
   background-color: #dace9f;
   padding: 20px;
+  /* Option 2: overflow: auto;*/
 }
 
 article {
   background-color: #e0cc5e;
   width: 60%;
-  padding: 10px
+  padding: 10px;
+  float: left;
 }
 
 .sidebar {
   background-color: #e0cc5e;
   width: 32%;
   padding: 10px;
+  float: right;
+}
+
+/*
+Option 3: 
+.clearfix {
+  clear: both;
+}
+*/
+
+
+/* Option 4: */
+.cf:after {
+  content: "";
+  display: table;
+  clear: both;  
 }
